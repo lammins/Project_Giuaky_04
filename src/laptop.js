@@ -3,7 +3,7 @@ import { useState } from "react";
 const Products = [
     {
         id: 1,
-        image: "laptop (1).jpg",
+        image: "/images/laptop (1).jpg",
         brand: "Asus",
         name: "Laptop Asus Vivobook 14 X1404ZA-NK386W",
         price: 8000000,
@@ -11,7 +11,7 @@ const Products = [
     },
     {
         id: "Lap002",
-        image: "laptop (2).jpg",
+        image: "/images/laptop (2).jpg",
         brand: "Asus",
         name: "Laptop Asus Vivobook 14 X1404ZA-NK389W",
         price: 25000000,
@@ -19,7 +19,7 @@ const Products = [
     },
     {
         id: "Lap003",
-        image: "laptop (3).jpg",
+        image: "/images/laptop (3).jpg",
         brand: "Asus",
         name: "Laptop Asus Vivobook 15 X1504VA-NJ069W",
         price: 10000000,
@@ -27,7 +27,7 @@ const Products = [
     },
     {
         id: "Lap004",
-        image: "laptop (4).jpg",
+        image: "/images/laptop (4).jpg",
         brand: "Asus",
         name: "Laptop ASUS ExpertBook B1 B1402CVA-NK0104W",
         price: 45000000,
@@ -35,7 +35,7 @@ const Products = [
     },
     {
         id: "Lap05",
-        image: "laptop (5).jpg",
+        image: "/images/laptop (5).jpg",
         brand: "Dell",
         name: "Laptop Gaming DELL TUF Gaming A15",
         price: 31000000,
@@ -44,7 +44,7 @@ const Products = [
 
     {
         id: "Lap006",
-        image: "laptop (6).jpg",
+        image: "/images/laptop (6).jpg",
         brand: "Samsung",
         name: "Samsung Galaxy Book Pro",
         price: 26000000,
@@ -52,7 +52,7 @@ const Products = [
     },
     {
         id: "Lap007",
-        image: "laptop (7).jpg",
+        image: "/images/laptop (7).jpg",
         brand: "Microsoft",
         name: "Surface Laptop 5",
         price: 18999000,
@@ -60,7 +60,7 @@ const Products = [
     },
     {
         id: "Lap008",
-        image: "laptop (8).jpg",
+        image: "/images/laptop (8).jpg",
         brand: "Lenovo",
         name: "Lenovo Legion 5 Pro",
         price: 34990000,
@@ -68,7 +68,7 @@ const Products = [
     },
     {
         id: "Lap009",
-        image: "laptop (9).jpg",
+        image: "/images/laptop (9).jpg",
         brand: "Dell",
         name: "Dell XPS 15 9520",
         price: 42990000,
@@ -76,7 +76,7 @@ const Products = [
     },
     {
         id: "Lap010",
-        image: "laptop (10).jpg",
+        image: "/images/laptop (10).jpg",
         brand: "ASUS",
         name: "ASUS TUF Gaming A17",
         price: 31990000,
@@ -84,7 +84,7 @@ const Products = [
     },
     {
         id: "Lap011",
-        image: "laptop (11).jpg",
+        image: "/images/laptop (11).jpg",
         brand: "Apple",
         name: "MacBook Air M2 13 inch",
         price: 28990000,
@@ -92,7 +92,7 @@ const Products = [
     },
     {
         id: "Lap012",
-        image: "laptop (12).jpg",
+        image: "/images/laptop (12).jpg",
         brand: "Apple",
         name: "MacBook Pro M3 16 inch",
         price: 72990000,
@@ -100,7 +100,7 @@ const Products = [
     },
     {
         id: "Lap013",
-        image: "laptop (13).jpg",
+        image: "/images/laptop (13).jpg",
         brand: "HP",
         name: "HP Spectre x360 14",
         price: 35990000,
@@ -108,7 +108,7 @@ const Products = [
     },
     {
         id: "Lap014",
-        image: "laptop (14).jpg",
+        image: "/images/laptop (14).jpg",
         brand: "Acer",
         name: "Acer Predator Helios 300",
         price: 37990000,
@@ -116,7 +116,7 @@ const Products = [
     },
     {
         id: "Lap015",
-        image: "laptop (15).jpg",
+        image: "/images/laptop (15).jpg",
         brand: "MSI",
         name: "MSI Stealth 15M",
         price: 42990000,
@@ -124,7 +124,7 @@ const Products = [
     },
     {
         id: "Lap016",
-        image: "laptop (16).jpg",
+        image: "/images/laptop (16).jpg",
         brand: "Razer",
         name: "Razer Blade 14",
         price: 65990000,
@@ -132,7 +132,7 @@ const Products = [
     },
     {
         id: "Lap017",
-        image: "laptop (17).jpg",
+        image: "/images/laptop (17).jpg",
         brand: "LG",
         name: "LG Gram 17 2023",
         price: 37990000,
@@ -140,7 +140,7 @@ const Products = [
     },
     {
         id: "Lap018",
-        image: "laptop (18).jpg",
+        image: "/images/laptop (18).jpg",
         brand: "Lenovo",
         name: "Lenovo ThinkPad X1 Carbon Gen 11",
         price: 48990000,
@@ -148,7 +148,7 @@ const Products = [
     },
     {
         id: "Lap019",
-        image: "laptop (19).jpg",
+        image: "/images/laptop (19).jpg",
         brand: "Samsung",
         name: "Samsung Galaxy Book3 Ultra",
         price: 53990000,
@@ -156,7 +156,7 @@ const Products = [
     },
     {
         id: "Lap020",
-        image: "laptop (20).jpg",
+        image: "/images/laptop (20).jpg",
         brand: "Microsoft",
         name: "Surface Laptop Studio 2",
         price: 72990000,
