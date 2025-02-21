@@ -9,7 +9,7 @@ const products = [
     description: "Intel Core i3-1215U, UHD Graphics, RAM 8GB DDR4, SSD 512GB, 14 Inch IPS FHD 60Hz, Win 11",
   },
   {
-    image: "https://bizweb.dktcdn.net/thumb/grande/100/329/122/products/laptop-asus-vivobook-14-x1404za-nk389w-00.jpg?v=1718880225653",
+    image: "./public/images/Vivobook1.jpg",
     brand: "Asus",
     name: "Laptop Asus Vivobook 14 X1404ZA-NK389W", 
     price: "15.790.000 ₫",
