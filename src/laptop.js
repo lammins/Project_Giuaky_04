@@ -1,116 +1,108 @@
-import React from "react";
-
 const products = [
-  {
-    image: "https://bizweb.dktcdn.net/thumb/grande/100/329/122/products/laptop-asus-vivobook-14-x1404za-nk386w-00.jpg?v=1738947938400",
-    brand: "Asus",
-    name: "Laptop Asus Vivobook 14 X1404ZA-NK386W",
-    price: "9.490.000 ₫",
-    description: "Intel Core i3-1215U, UHD Graphics, RAM 8GB DDR4, SSD 512GB, 14 Inch IPS FHD 60Hz, Win 11",
-  },
-  {
-    image: "https://bizweb.dktcdn.net/thumb/grande/100/329/122/products/laptop-asus-vivobook-14-x1404za-nk389w-00.jpg?v=1718880225653",
-    brand: "Asus",
-    name: "Laptop Asus Vivobook 14 X1404ZA-NK389W", 
-    price: "15.790.000 ₫",
-    description: "Intel Core i7-1255U, Iris Xe Graphics, RAM 16GB DDR4, SSD 512GB, 14 Inch IPS FHD 60Hz, Win 11",
-  },
-  {
-    image: "https://bizweb.dktcdn.net/100/329/122/products/laptop-asus-vivobook-15-x1504va-nj069w.jpg?v=1734109481490",
-    brand: "Asus",
-    name: "Laptop Asus Vivobook 15 X1504VA-NJ069W",
-    price: "10.290.000 ₫",
-    description: "Intel Core i3-1315U, UHD Graphics, Ram 8GB DDR4, SSD 512GB, 15.6 Inch IPS FHD 60Hz, Win 11",
-  },
-  {
-    image: "https://bizweb.dktcdn.net/thumb/grande/100/329/122/products/laptop-asus-expertbook-b1-b1402cva-nk0104w-01.jpg?v=1726031495900",
-    brand: "Asus",
-    name: "Laptop ASUS ExpertBook B1 B1402CVA-NK0104W",
-    price: "10.690.000 ₫",
-    description: "i3-1315U, UHD Graphics, RAM 8GB DDR4, SSD 256GB, 14 Inch TN FHD 60Hz, Win 11",
-  },
-  {
-    image: "https://bizweb.dktcdn.net/thumb/grande/100/329/122/products/laptop-gaming-asus-tuf-gaming-a15-fa506ncr-hn047w-10.jpg?v=1731580048390",
-    brand: "Dell",
-    name: "Laptop Gaming ASUS TUF Gaming A15 ",
-    price: "18.990.000 ₫",
-    description: "Ryzen 7 7435HS, RTX 3050 4GB, RAM 16GB DDR5, SSD 512GB, 15.6 Inch IPS FHD 144Hz, Win 11",
-  },
-  {
-    image: "https://bizweb.dktcdn.net/thumb/grande/100/329/122/products/laptop-gaming-asus-tuf-gaming-a15-fa506ncr-hn047w-10.jpg?v=1731580048390",
-    brand: "Dell",
-    name: "Laptop Gaming ASUS TUF Gaming A15 ",
-    price: "18.990.000 ₫",
-    description: "Ryzen 7 7435HS, RTX 3050 4GB, RAM 16GB DDR5, SSD 512GB, 15.6 Inch IPS FHD 144Hz, Win 11",
-  },
-  {
-    image: "https://bizweb.dktcdn.net/thumb/grande/100/329/122/products/laptop-gaming-asus-tuf-gaming-a15-fa506ncr-hn047w-10.jpg?v=1731580048390",
-    brand: "Dell",
-    name: "Laptop Gaming ASUS TUF Gaming A15 ",
-    price: "18.990.000 ₫",
-    description: "Ryzen 7 7435HS, RTX 3050 4GB, RAM 16GB DDR5, SSD 512GB, 15.6 Inch IPS FHD 144Hz, Win 11",
-  },
-  {
-    image: "https://bizweb.dktcdn.net/thumb/grande/100/329/122/products/laptop-gaming-asus-tuf-gaming-a15-fa506ncr-hn047w-10.jpg?v=1731580048390",
-    brand: "Dell",
-    name: "Laptop Gaming ASUS TUF Gaming A15 ",
-    price: "18.990.000 ₫",
-    description: "Ryzen 7 7435HS, RTX 3050 4GB, RAM 16GB DDR5, SSD 512GB, 15.6 Inch IPS FHD 144Hz, Win 11",
-  },
-  {
-    image: "https://bizweb.dktcdn.net/thumb/grande/100/329/122/products/laptop-gaming-asus-tuf-gaming-a15-fa506ncr-hn047w-10.jpg?v=1731580048390",
-    brand: "Dell",
-    name: "Laptop Gaming ASUS TUF Gaming A15 ",
-    price: "18.990.000 ₫",
-    description: "Ryzen 7 7435HS, RTX 3050 4GB, RAM 16GB DDR5, SSD 512GB, 15.6 Inch IPS FHD 144Hz, Win 11",
-  },
-  {
-    image: "https://bizweb.dktcdn.net/thumb/grande/100/329/122/products/laptop-gaming-asus-tuf-gaming-a15-fa506ncr-hn047w-10.jpg?v=1731580048390",
-    brand: "Dell",
-    name: "Laptop Gaming ASUS TUF Gaming A15 ",
-    price: "18.990.000 ₫",
-    description: "Ryzen 7 7435HS, RTX 3050 4GB, RAM 16GB DDR5, SSD 512GB, 15.6 Inch IPS FHD 144Hz, Win 11",
-  },
-];
-
-export default function Laptop() {
-  return (
-    <div>
-      <div style={{ padding: "20px", maxWidth: "1200px", margin: "auto" }}>
-        <div style={{ display: "flex", gap: "15px", flexWrap: "wrap", justifyContent: "center" }}>
-          {products.map((product) => (
-            <div
-              key={product.id}
-              style={{
-                width: "220px",
-                border: "1px solid #ddd",
-                borderRadius: "10px",
-                overflow: "hidden",
-                textAlign: "center",
-                background: "#fff",
-                position: "relative",
-                transition: "transform 0.3s ease"
-              }}
-            >
-              <img
-                src={product.image}
-                alt={product.name}
-                style={{
-                  width: "100%",
-                  height: "140px",
-                  objectFit: "cover",
-                  transition: "transform 0.3s ease"
-                }}
-              />
-              <div style={{ padding: "10px" }}>
-                <h3 style={{ fontSize: "14px", margin: "5px 0" }}>{product.name}</h3>
-                <p style={{ fontSize: "12px", color: "#555" }}>{product.description}</p>
-                <h4 style={{ color: "green", margin: "10px 0" }}>{product.price}</h4>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </div>
-  );
-} 
+    {
+      image: "laptop (1)",
+      brand: "Asus",
+      name: "Laptop Asus Vivobook 14 X1404ZA-NK386W",
+      price: 8000000,
+      description: "Intel Core i3-1215U, UHD Graphics, RAM 8GB DDR4, SSD 512GB, 14 Inch IPS FHD 60Hz, Win 11",
+    },
+    {
+      image: "laptop (2)",
+      brand: "Asus",
+      name: "Laptop Asus Vivobook 14 X1404ZA-NK389W",
+      price: 25000000,
+      description: "Intel Core i7-1255U, Iris Xe Graphics, RAM 16GB DDR4, SSD 512GB, 14 Inch IPS FHD 60Hz, Win 11",
+    },
+    {
+      image: "laptop (3)",
+      brand: "Asus",
+      name: "Laptop Asus Vivobook 15 X1504VA-NJ069W",
+      price: 10000000,
+      description: "Intel Core i3-1315U, UHD Graphics, Ram 8GB DDR4, SSD 512GB, 15.6 Inch IPS FHD 60Hz, Win 11",
+    },
+    {
+      image: "laptop (4)",
+      brand: "Asus",
+      name: "Laptop ASUS ExpertBook B1 B1402CVA-NK0104W",
+      price: 45000000,
+      description: "i3-1315U, UHD Graphics, RAM 8GB DDR4, SSD 256GB, 14 Inch TN FHD 60Hz, Win 11",
+    },
+    {
+      image: "laptop (5)",
+      brand: "Dell",
+      name: "Laptop Gaming DELL TUF Gaming A15",
+      price: 31000000,
+      description: "Ryzen 7 7435HS, RTX 3050 4GB, RAM 16GB DDR5, SSD 512GB, 15.6 Inch IPS FHD 144Hz, Win 11",
+    },
+    {
+      image: "laptop (11)",
+      brand: "Apple",
+      name: "MacBook Air M2 13 inch",
+      price: 28990000,
+      description: "Apple M2, RAM 8GB, SSD 256GB, 13.3 Inch Retina, macOS",
+    },
+    {
+      image: "laptop (12)",
+      brand: "Apple",
+      name: "MacBook Pro M3 16 inch",
+      price: 72990000,
+      description: "Apple M3 Pro, RAM 16GB, SSD 512GB, 16.2 Inch Liquid Retina XDR, macOS",
+    },
+    {
+      image: "laptop (13)",
+      brand: "HP",
+      name: "HP Spectre x360 14",
+      price: 35990000,
+      description: "Intel Core i7-13700H, RAM 16GB LPDDR5, SSD 1TB, 14 Inch OLED 3K Touch, Win 11",
+    },
+    {
+      image: "laptop (14)",
+      brand: "Acer",
+      name: "Acer Predator Helios 300",
+      price: 37990000,
+      description: "Intel Core i7-12700H, RTX 3060 6GB, RAM 16GB DDR5, SSD 512GB, 15.6 Inch IPS QHD 165Hz, Win 11",
+    },
+    {
+      image: "laptop (15)",
+      brand: "MSI",
+      name: "MSI Stealth 15M",
+      price: 42990000,
+      description: "Intel Core i9-12900H, RTX 3070 Ti 8GB, RAM 32GB DDR5, SSD 1TB, 15.6 Inch IPS QHD 165Hz, Win 11",
+    },
+    {
+      image: "laptop (16)",
+      brand: "Razer",
+      name: "Razer Blade 14",
+      price: 65990000,
+      description: "AMD Ryzen 9 6900HX, RTX 3080 Ti 16GB, RAM 32GB DDR5, SSD 1TB, 14 Inch IPS QHD 165Hz, Win 11",
+    },
+    {
+      image: "laptop (17)",
+      brand: "LG",
+      name: "LG Gram 17 2023",
+      price: 37990000,
+      description: "Intel Core i7-1360P, Iris Xe Graphics, RAM 16GB LPDDR5, SSD 512GB, 17 Inch IPS WQXGA, Win 11",
+    },
+    {
+      image: "laptop (18)",
+      brand: "Lenovo",
+      name: "Lenovo ThinkPad X1 Carbon Gen 11",
+      price: 48990000,
+      description: "Intel Core i7-1370P, Iris Xe Graphics, RAM 32GB LPDDR5, SSD 1TB, 14 Inch IPS 2.8K, Win 11",
+    },
+    {
+      image: "laptop (19)",
+      brand: "Samsung",
+      name: "Samsung Galaxy Book3 Ultra",
+      price: 53990000,
+      description: "Intel Core i9-13900H, RTX 4070 8GB, RAM 32GB LPDDR5, SSD 1TB, 16 Inch AMOLED 3K, Win 11",
+    },
+    {
+      image: "laptop (20)",
+      brand: "Microsoft",
+      name: "Surface Laptop Studio 2",
+      price: 72990000,
+      description: "Intel Core i9-13950HX, RTX 4060 8GB, RAM 32GB LPDDR5, SSD 1TB, 14.4 Inch PixelSense 120Hz Touch, Win 11",
+    },
+  ];
+  
