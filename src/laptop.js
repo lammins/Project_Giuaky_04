@@ -188,33 +188,27 @@ export default function Laptop() {
 
     return (
         <div>
-            <div style={{ padding: "20px", maxWidth: "1200px", margin: "auto" }}>
-                <div style={{ display: "flex", gap: "15px", flexWrap: "wrap", justifyContent: "center" }}>
+            <div>
+                <div>
                     {products.map((product) => (
                         <div
                             key={product.id}
                             style={{
                                 width: "220px",
                                 border: "1px solid #ddd",
-                                borderRadius: "10px",
-                                overflow: "hidden",
                                 textAlign: "center",
-                                background: "#fff",
-                                position: "relative",
-                                transition: "transform 0.3s ease",
                                 padding: "10px",
                             }}
                         >
                             <img
                                 src={product.image}
                                 alt={product.name}
-                                style={{ width: "100%", height: "140px", objectFit: "cover" }}
                             />
-                            <h3 style={{ fontSize: "14px", margin: "5px 0" }}>{product.name}</h3>
-                            <p style={{ fontSize: "12px", color: "#555" }}>{product.description}</p>
-                            <h4 style={{ color: "green", margin: "10px 0" }}>{product.price}</h4>
+                            <h3>{product.name}</h3>
+                            <p>{product.description}</p>
+                            <h4>{product.price}</h4>
                             <button onClick={() => handleEditClick(product)}>Update</button>
-                            <button onClick={() => handleDelete(product.id)} style={{ marginLeft: "5px", background: "red", color: "white" }}>Delete</button>
+                            <button onClick={() => handleDelete(product.id)} >Delete</button>
                         </div>
                     ))}
                 </div>
@@ -223,13 +217,8 @@ export default function Laptop() {
                 <div
                     style={{
                         position: "fixed",
-                        top: "50%",
-                        left: "50%",
-                        transform: "translate(-50%, -50%)",
-                        background: "white",
-                        padding: "20px",
-                        boxShadow: "0px 0px 10px rgba(0,0,0,0.2)",
-                        zIndex: 1000,
+                        top: "20%",
+                        left: "30%",
                     }}
                 >
                     <h3>Chỉnh sửa sản phẩm</h3>
