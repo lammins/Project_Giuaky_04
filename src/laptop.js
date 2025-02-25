@@ -164,6 +164,48 @@ const Products = [
     },
 ];
 
+function EditProduct({ product, onUpdate, onCancel }) {
+    const [editedProduct, setEditedProduct] = useState(product);
+
+    const handleUpdate = (event) => {
+        event.preventDefault();
+        onUpdate(editedProduct);
+    };
+
+    return (
+        <div style={{ position: "fixed", top: "20%", left: "30%" }}>
+            <h3>Chỉnh sửa sản phẩm</h3>
+            <form onSubmit={handleUpdate}>
+                <input
+                    type="text"
+                    value={editedProduct.name}
+                    onChange={(e) => setEditedProduct({ ...editedProduct, name: e.target.value })}
+                    style={{ width: "100%", marginBottom: "10px" }}
+                />
+                <input
+                    type="text"
+                    value={editedProduct.price}
+                    onChange={(e) => setEditedProduct({ ...editedProduct, price: e.target.value })}
+                    style={{ width: "100%", marginBottom: "10px" }}
+                />
+                <textarea
+                    value={editedProduct.description}
+                    onChange={(e) => setEditedProduct({ ...editedProduct, description: e.target.value })}
+                    style={{ width: "100%", marginBottom: "10px" }}
+                />
+                <button type="submit">Lưu</button>
+                <button type="button" onClick={onCancel} style={{ marginLeft: "10px" }}>Hủy</button>
+            </form>
+        </div>
+    );
+}
+
+function DeleteProductButton({ productId, onDelete }) {
+    return (
+        <button onClick={() => onDelete(productId)}>Delete</button>
+    );
+}
+
 export default function Laptop() {
     const [products, setProducts] = useState(Products);
     const [editingProduct, setEditingProduct] = useState(null);
@@ -174,76 +216,39 @@ export default function Laptop() {
         }
     };
 
-    const handleEditClick = (product) => {
-        setEditingProduct(product);
-    };
-
-    const handleUpdateProduct = (event) => {
-        event.preventDefault();
-        setProducts(
-            products.map((p) => (p.id === editingProduct.id ? editingProduct : p))
-        );
+    const handleUpdateProduct = (updatedProduct) => {
+        setProducts(products.map((p) => (p.id === updatedProduct.id ? updatedProduct : p)));
         setEditingProduct(null);
     };
 
     return (
         <div>
-            <div>
-                <div>
-                    {products.map((product) => (
-                        <div
-                            key={product.id}
-                            style={{
-                                width: "220px",
-                                border: "1px solid #ddd",
-                                textAlign: "center",
-                                padding: "10px",
-                            }}
-                        >
-                            <img
-                                src={product.image}
-                                alt={product.name}
-                            />
-                            <h3>{product.name}</h3>
-                            <p>{product.description}</p>
-                            <h4>{product.price}</h4>
-                            <button onClick={() => handleEditClick(product)}>Update</button>
-                            <button onClick={() => handleDelete(product.id)} >Delete</button>
-                        </div>
-                    ))}
-                </div>
+            <div style={{ display: "flex" }}>
+                {products.map((product) => (
+                    <div
+                        key={product.id}
+                        style={{
+                            width: "220px",
+                            border: "1px solid #ddd",
+                            textAlign: "center",
+                            padding: "10px",
+                        }}
+                    >
+                        <img src={product.image} alt={product.name} />
+                        <h3>{product.name}</h3>
+                        <p>{product.description}</p>
+                        <h4>{product.price}</h4>
+                        <button onClick={() => setEditingProduct(product)}>Update</button>
+                        <DeleteProductButton productId={product.id} onDelete={handleDelete} />
+                    </div>
+                ))}
             </div>
             {editingProduct && (
-                <div
-                    style={{
-                        position: "fixed",
-                        top: "20%",
-                        left: "30%",
-                    }}
-                >
-                    <h3>Chỉnh sửa sản phẩm</h3>
-                    <form onSubmit={handleUpdateProduct}>
-                        <input
-                            type="text"
-                            value={editingProduct.name}
-                            onChange={(e) => setEditingProduct({ ...editingProduct, name: e.target.value })}
-                            style={{ width: "100%", marginBottom: "10px" }}
-                        />
-                        <input
-                            type="text"
-                            value={editingProduct.price}
-                            onChange={(e) => setEditingProduct({ ...editingProduct, price: e.target.value })}
-                            style={{ width: "100%", marginBottom: "10px" }}
-                        />
-                        <textarea
-                            value={editingProduct.description}
-                            onChange={(e) => setEditingProduct({ ...editingProduct, description: e.target.value })}
-                            style={{ width: "100%", marginBottom: "10px" }}
-                        />
-                        <button type="submit">Lưu</button>
-                        <button onClick={() => setEditingProduct(null)} style={{ marginLeft: "10px" }}>Hủy</button>
-                    </form>
-                </div>
+                <EditProduct 
+                    product={editingProduct} 
+                    onUpdate={handleUpdateProduct} 
+                    onCancel={() => setEditingProduct(null)} 
+                />
             )}
         </div>
     );
