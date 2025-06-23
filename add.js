@@ -1,0 +1,1 @@
+console.log('addddd.js loaded');
